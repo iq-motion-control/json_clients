@@ -14,3 +14,10 @@ pipelines:
              - git checkout development
              - git pull
              - git push sync development
+      master:
+        - step:
+            script:
+              - git remote add sync git@github.com:iq-motion-control/json_clients.git
+              - git checkout master
+              - git pull
+              - git push sync master
