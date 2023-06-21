@@ -11,6 +11,6 @@ pipelines:
         - step:
            script:
              - git remote add sync https://github.com/iq-motion-control/json_clients.git
-             - git checkout devevelopment
+             - git checkout development
              - git pull
              - git push sync development
