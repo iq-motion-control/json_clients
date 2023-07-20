@@ -10,9 +10,10 @@ pipelines:
       development:
         - step:
            script:
-             - git clone --bare git@bitbucket.org:iqcontrol/json_clients.git
-             - cd json_clients.git
-             - git push --mirror git@github.com:iq-motion-control/json_clients.git
+             - git remote add sync git@github.com:iq-motion-control/json_clients.git
+             - git checkout development
+             - git pull
+             - git push sync development --force
       master:
         - step:
             script:
